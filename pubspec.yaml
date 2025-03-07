@@ -1,6 +1,6 @@
 name: chrono_countdown
 description: "A time countdown widget for Flutter"
-version: 0.0.1
+version: 0.1.0
 repository: https://github.com/ngocnguyenc3-dev/chrono-countdown
 
 environment:

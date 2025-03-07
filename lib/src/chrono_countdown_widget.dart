@@ -14,7 +14,7 @@ class ChronoCountdownWidget extends StatefulWidget {
     this.direction = ChronoDirection.bottomToTop,
     required this.boxTimeBuilder,
     this.separatorBuilder,
-    this.chronoTimeType = ChronoTimeType.hours,
+    this.chronoTimeType = ChronoTimeType.hour,
     this.textStyle = const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w400,
@@ -155,21 +155,21 @@ enum ChronoDirection {
 }
 
 enum ChronoTimeType {
-  days,
-  hours,
-  minutes,
-  seconds,
+  day,
+  hour,
+  minute,
+  second,
 }
 
 extension ChronoTimeTypeX on ChronoTimeType {
-  bool get isShowDays => this == ChronoTimeType.days;
-  bool get isShowHours => isShowDays || this == ChronoTimeType.hours;
-  bool get isShowMinutes => this != ChronoTimeType.seconds;
+  bool get isShowDays => this == ChronoTimeType.day;
+  bool get isShowHours => isShowDays || this == ChronoTimeType.hour;
+  bool get isShowMinutes => this != ChronoTimeType.second;
 
-  bool get isSeconds => this == ChronoTimeType.seconds;
-  bool get isMinutes => this == ChronoTimeType.minutes;
-  bool get isHours => this == ChronoTimeType.hours;
-  bool get isDays => this == ChronoTimeType.days;
+  bool get isSeconds => this == ChronoTimeType.second;
+  bool get isMinutes => this == ChronoTimeType.minute;
+  bool get isHours => this == ChronoTimeType.hour;
+  bool get isDays => this == ChronoTimeType.day;
 }
 
 extension ChronoDirectionX on ChronoDirection {
