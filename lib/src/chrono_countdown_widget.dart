@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'chrono_box_time.dart';
 import 'chrono_countdown_controller.dart';
 
-
 class ChronoCountdownWidget extends StatefulWidget {
   /// You can use initDuration or controller to initialize the countdown.
   /// But you cannot use both.
@@ -20,8 +19,7 @@ class ChronoCountdownWidget extends StatefulWidget {
       fontWeight: FontWeight.w400,
       color: Colors.white,
     ),
-  }) : assert(
-            (initDuration != null) ^ (controller != null),
+  }) : assert((initDuration != null) ^ (controller != null),
             'initDuration and controller cannot both be provided');
 
   /// The initial duration of the countdown.

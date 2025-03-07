@@ -11,7 +11,8 @@ import 'chrono_countdown_controller_impl.dart';
 /// [isFinished] is true if the countdown is finished.
 ///
 
-abstract class ChronoCountdownController extends ValueListenable with ChangeNotifier {
+abstract class ChronoCountdownController extends ValueListenable
+    with ChangeNotifier {
   ChronoCountdownController();
 
   bool get isPaused;
@@ -21,7 +22,6 @@ abstract class ChronoCountdownController extends ValueListenable with ChangeNoti
   void resume();
 
   factory ChronoCountdownController.fromDuration(
-     {required Duration initDuration}
-  ) =>
-     ChronoCountdownControllerImpl(initDuration: initDuration);
+          {required Duration initDuration}) =>
+      ChronoCountdownControllerImpl(initDuration: initDuration);
 }

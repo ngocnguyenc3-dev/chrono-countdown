@@ -11,18 +11,17 @@ class ChronoCountdownControllerImpl extends ChronoCountdownController {
   int _seconds;
   Timer? _timer;
 
-  
   @override
   bool get isFinished => _seconds == 0;
-  
+
   @override
   bool get isPaused => _timer == null;
-  
+
   @override
   void pause() {
     _disposeTimer();
   }
-  
+
   @override
   void resume() {
     pause();
@@ -46,7 +45,7 @@ class ChronoCountdownControllerImpl extends ChronoCountdownController {
     _timer?.cancel();
     _timer = null;
   }
-  
+
   @override
   get value => _seconds;
 }
