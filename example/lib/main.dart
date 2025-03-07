@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),
-              chronoTimeType: ChronoTimeType.days,
+              chronoTimeType: ChronoTimeType.day,
               boxTimeBuilder: (child) => Container(
                 height: 40,
                 constraints: const BoxConstraints(minWidth: 40),
